@@ -1,0 +1,19 @@
+select @@hostname;
+show variables  like "%host%";
+
+current pwd:Alabeers@38  
+user:sb1
+
+MySQL commands
+Working with databases
+
+create database sb9;
+use sb9;
+show databases;
+
+show tables;
+
+CREATE TABLE Marks(ID integer, Name varchar (100), Marks integer);
+
+ insert into marks values (001,'Ameer',89);
+select current_user;
