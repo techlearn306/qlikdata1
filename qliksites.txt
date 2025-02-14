@@ -1,12 +1,4 @@
-https://www.youtube.com/watch?v=AfDaxXQS5No
-https://www.youtube.com/watch?v=ny8d2XlTWsQ
-https://www.youtube.com/watch?v=6KHs0xa-jgE
-https://www.youtube.com/watch?v=q-3wKfdmiJE
-https://www.youtube.com/watch?v=fHWmX-uV8Ro
-https://help.qlik.com/en-US/video/AJ7On3OsYfU
-https://www.youtube.com/watch?v=d_1CejFxJ0I
-https://www.youtube.com/watch?v=kST2r5kC3JQ
-https://www.youtube.com/watch?v=YhrcnkHdc3A
+
 
 for Qlik data samples
 https://community.qlik.com/t5/New-to-Qlik-Analytics/Need-Sample-data-Excel-preferable-for-creating-dashboard-of-Test/td-p/1451553
