@@ -1,0 +1,35 @@
+outer join is default join in Qlik sense.
+join
+left join (Return$)
+Right join
+inner join
+
+
+
+LOAD
+    "Order ID",
+    "Product ID",
+    Product,
+    "Unit Price",
+    Quantity,
+    Discount,
+    "Extended Price"
+FROM [lib://DataFiles/CUSTOMER DATA.xlsx]
+(ooxml, embedded labels, table is ORDER);
+Inner join
+LOAD
+    Country,
+    Salesperson,
+    "Order Date",
+    OrderID,
+    "Order Amount"
+FROM [lib://DataFiles/CUSTOMER DATA.xlsx]
+(ooxml, embedded labels, table is [SALES PERSON]);
+
+joins code
+
+
+
+1tier architecture is used when we have less data.
+
+

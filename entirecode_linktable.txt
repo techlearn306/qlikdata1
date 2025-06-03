@@ -1,0 +1,68 @@
+[Invoice]:
+LOAD
+AutoNumber([Product_ID]&[Supplier_ID]&[Material_ID]) as %key,
+// 	[Product_ID],
+// 	[Supplier_ID],
+// 	[Material_ID],
+	[Invoice_ID],
+	[Invoice_Qty],
+	[Spend],
+	[Invoice_Date]
+ FROM [lib://DataFiles/invoice.xlsx]
+(ooxml, embedded labels, table is Invoice);
+
+[purchase_order]:
+LOAD
+AutoNumber([Product_ID]&[Supplier_ID]&[Material_ID]) as %key,
+// 	[Product_ID],
+// 	[Supplier_ID] AS [purchase_order.Supplier_ID],
+// 	[Material_ID] AS [purchase_order.Material_ID],
+	[PurchaseOrder_ID],
+	[PO_quantity],
+	[Order_date]
+ FROM [lib://DataFiles/invoice.xlsx]
+(ooxml, embedded labels, table is purchase_order);
+
+
+linktable:
+Load Distinct
+ AutoNumber([Product_ID]&[Supplier_ID]&[Material_ID]) as %key,
+ [Product_ID],
+ [Supplier_ID],
+ [Material_ID]
+//  'PO' as Flag
+ FROM [lib://DataFiles/invoice.xlsx]
+(ooxml, embedded labels, table is Invoice);
+
+
+[Material]:
+LOAD
+	[Material_ID],
+	[material_name]
+ FROM [lib://DataFiles/invoice.xlsx]
+(ooxml, embedded labels, table is Material);
+
+[Product]:
+LOAD
+	[Category_ID] AS [Product.Category_ID],
+	[Product_ID],
+	[Product_name]
+ FROM [lib://DataFiles/invoice.xlsx]
+(ooxml, embedded labels, table is Product);
+
+[Supplier]:
+LOAD
+	[Supplier_ID],
+	[Supplier_name]
+ FROM [lib://DataFiles/invoice.xlsx]
+(ooxml, embedded labels, table is Supplier);
+
+[Category]:
+LOAD
+	[Category_ID] AS [Category.Category_ID],
+	[Product_ID],
+	[Category_Name]
+ FROM [lib://DataFiles/invoice.xlsx]
+(ooxml, embedded labels, table is Category);
+
+
